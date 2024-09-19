@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Etiqueta extends Model
 {
     use HasFactory;
+    public function recetas(){
+        return $this->belongsToMany(Receta::class);
+    }
 }
